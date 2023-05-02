@@ -68,7 +68,7 @@ hp2_PLAGL1_alt_TSS_DMR_filtered<- hp2_PLAGL1_alt_TSS_DMR %>% semi_join(PLAGL1_ct
 
 
 
-GRB10_alt_TSS_DMR<- sorted_df %>% filter(between(start_position,50943355,50944182)) # alders og vævs specifik
+GRB10_alt_TSS_DMR<- sorted_df %>% filter(between(start_position,50943355,50944182)) 
 GRB10_ctrl <- ctrls %>% filter(between(start_position,50943355,50944182))
 #filter ctrl dataframe to rows where mean methylation frequency is between 40 and 60
 GRB10_ctrl_filtered <- GRB10_ctrl %>% filter(between(methylation_frequency, 40, 60))
@@ -110,6 +110,7 @@ hp1_H19_IGF2_IG_DMR_filtered <- hp1_H19_IGF2_IG_DMR %>% semi_join(H19_ctrl_filte
 hp2_H19_IGF2_IG_DMR<- hp2 %>% filter(between(start_position,2085438,2090906))
 hp2_H19_IGF2_IG_DMR_filtered <- hp2_H19_IGF2_IG_DMR %>% semi_join(H19_ctrl_filtered, by = "start_position")
 
+
 KCNQ1OT1_TSS_DMR<- sorted_df %>% filter(between(start_position,2788106,2790240))# MS-MLPA probe
 KCNQ_ctrl <- ctrls%>% filter(between(start_position,2788106,2790240))
 #filter ctrl dataframe to rows where mean methylation frequency is between 40 and 60
@@ -123,9 +124,6 @@ hp1_KCNQ1OT1_TSS_DMR_filtered <- hp1_KCNQ1OT1_TSS_DMR %>% semi_join(KCNQ_ctrl_fi
 hp2_KCNQ1OT1_TSS_DMR<- hp2 %>% filter(between(start_position,2788106,2790240))
 hp2_KCNQ1OT1_TSS_DMR_filtered <- hp2_KCNQ1OT1_TSS_DMR %>% semi_join(KCNQ_ctrl_filtered, by = "start_position")
 
-
-#MEG3_DLK_IG_DMR<- sorted_df %>% filter(between(start_position,95044223,95046285))# 
-#MEG_DLK_ctrl <- ctrls%>% filter(between(start_position,95044223,95046285))
 
 MEG3_TSS_DMR<- sorted_df %>% filter(between(start_position,95059075,95062529))# MS-MLPA probe
 MEG3_ctrl <- ctrls%>% filter(between(start_position,95059075,95062529))
@@ -168,6 +166,7 @@ hp1_MAGEL2_TSS_DMR_filtered <- hp1_MAGEL2_TSS_DMR %>% semi_join(MAGEL2_ctrl_filt
 hp2_MAGEL2_TSS_DMR<- hp2 %>% filter(between(start_position,21381784,21383056))
 hp2_MAGEL2_TSS_DMR_filtered <- hp2_MAGEL2_TSS_DMR %>% semi_join(MAGEL2_ctrl_filtered, by = "start_position")
 
+
 SNURF_TSS_DMR<- sorted_df %>% filter(between(start_position,22691523,22693493))#MS-MLPA probe
 SNURF_ctrl <- ctrls  %>% filter(between(start_position,22691523,22693493))
 #filter ctrl dataframe to rows where mean methylation frequency is between 40 and 60
@@ -194,6 +193,7 @@ hp1_PEG3_TSS_DMR_filtered <- hp1_PEG3_TSS_DMR %>% semi_join(PEG3_ctrl_filtered, 
 hp2_PEG3_TSS_DMR <- hp2 %>% filter(between(start_position,59932193,59936667))
 hp2_PEG3_TSS_DMR_filtered <- hp2_PEG3_TSS_DMR %>% semi_join(PEG3_ctrl_filtered, by = "start_position")
 
+
 GNAS_NESP_TSS_DMR <- sorted_df %>% filter(between(start_position,60622124,60626697))#MS-MLPA probe
 GNAS_NESP_ctrl <- ctrls %>% filter(between(start_position,60622124,60626697))
 #filter ctrl dataframe to rows where mean methylation frequency is between 40 and 60
@@ -207,6 +207,7 @@ hp1_GNAS_NESP_TSS_DMR_filtered <- hp1_GNAS_NESP_TSS_DMR %>% semi_join(GNAS_NESP_
 hp2_GNAS_NESP_TSS_DMR <- hp2 %>% filter(between(start_position,60622124,60626697))
 hp2_GNAS_NESP_TSS_DMR_filtered <- hp2_GNAS_NESP_TSS_DMR %>% semi_join(GNAS_NESP_ctrl_filtered, by = "start_position")
 
+
 GNAS_AS1_TSS_DMR <- sorted_df %>% filter(between(start_position,60633713,60636097))#MS-MLPA probe
 GNAS_AS_ctrl <- ctrls %>% filter(between(start_position,60633713,60636097))
 #filter ctrl dataframe to rows where mean methylation frequency is between 40 and 60
@@ -219,6 +220,7 @@ hp1_GNAS_AS1_TSS_DMR_filtered <- hp1_GNAS_AS1_TSS_DMR %>% semi_join(GNAS_AS_ctrl
 
 hp2_GNAS_AS1_TSS_DMR <- hp2 %>% filter(between(start_position,60633713,60636097))
 hp2_GNAS_AS1_TSS_DMR_filtered <- hp2_GNAS_AS1_TSS_DMR %>% semi_join(GNAS_AS_ctrl_filtered, by = "start_position")
+
 
 GNASXL_Ex1_DMR <- sorted_df %>% filter(between(start_position,60637080,60639527))#MS-MLPA probe
 GNASXL_ctrl <- ctrls %>% filter(between(start_position,60637080,60639527))
