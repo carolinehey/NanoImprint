@@ -9,7 +9,7 @@ An R markdown script for creating the output of NanoImprint. A tool for interpre
 
 Data requirements:
 * Data should be obtained from modbam2bed included in the [Human variation workflow](https://github.com/epi2me-labs/wf-human-variation) provided by ONTs epi2me labs. Both phased and unphasedBED files is required and should be created using the command line options `--phase_methyl` and `--methyl` in the [Human variation workflow](https://github.com/epi2me-labs/wf-human-variation).
-* All three BED files must be sorted with BEDTools intersected before use. Sorting to the  regions can be done using the [region_T2T.bed](./regions_T2T.bed) or [regions_hg38.bed`file](./regions_hg38.bed):
+* All three BED files must be sorted with BEDTools intersected before use. Sorting to the  regions can be done using the [region_T2T.bed](./regions_T2T.bed) or [regions_hg38.bed](./regions_hg38.bed):
 `bedtools intersect -a yourfile.methyl.cpg.acc.bed -b regions_T2T.bed > yourfile.methyl.filtered.bed`
 
 ### Report output examples:
