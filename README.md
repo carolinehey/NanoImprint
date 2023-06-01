@@ -4,7 +4,7 @@ An R markdown script for creating the output of NanoImprint. A tool for interpre
 
 ## Usage
 * For reference genome T2T-CHM13v2.0: Download [NanoImprint.Rmd](./NanoImprint.Rmd) and [ctrls_2.xlsx](./ctrls_2.xlsx)
-* For reference genome hg38: Download [NanoImprint_Hg38.Rmd](./NanoImprint_Hg38.Rmd) and [ctrls_hg38.xlsx](./ctrls_hg38.xlsx).
+* For reference genome hg38: Download [NanoImprint_Hg38.Rmd](./NanoImprint_Hg38.Rmd) and [ctrls_hg38.xlsx](./ctrls_hg38.xlsx). NOTE: Mapping to region H19/IGF2:IG-DMR is incomplete with hg38.
 * Place the files in your data folder and open the NanoImprint script. Import your data BED files into the `#import data` section and run the script to produce an NanoImprint report. See output examples below.
 
 Data requirements:
