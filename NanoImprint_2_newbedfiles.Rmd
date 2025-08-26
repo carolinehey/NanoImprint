@@ -19,9 +19,9 @@ library(kableExtra)
 
 ```{r echo=TRUE}
 #import data
-sample_df <- read.table("Q:/Caroline/sample5/sample5_filtered.bed", quote="\"", comment.char="")
-hap1 <- read.table("Q:/Caroline/sample5/sample5_hap1_filtered.bed", quote="\"", comment.char="")
-hap2 <- read.table("Q:/Caroline/sample5/sample5_hap2_filtered.bed", quote="\"", comment.char="")
+sample_df <- read.table("Your_file.methyl.filtered.bed", quote="\"", comment.char="")
+hap1 <- read.table("Your_file_hap_1.methyl.filtered.bed", quote="\"", comment.char="")
+hap2 <- read.table("Your_file_hap_2.methyl.filtered.bed", quote="\"", comment.char="")
 
 #filter to only 5mC
 sample_df<- sample_df[sample_df$V4== "m",]
