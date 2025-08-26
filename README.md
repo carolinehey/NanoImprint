@@ -3,12 +3,12 @@
 An R markdown script for creating the output of NanoImprint. A tool for interpretation and visualization of DNA methylation at regions implicated in known imprinting disorders.
 
 ## Usage
-* For reference genome T2T-CHM13v2.0: Download [NanoImprint.Rmd](./NanoImprint.Rmd) and [ctrls_2.xlsx](./ctrls_2.xlsx)
-* For reference genome hg38: Download [NanoImprint_Hg38.Rmd](./NanoImprint_Hg38.Rmd) and [ctrls_hg38.xlsx](./ctrls_hg38.xlsx). NOTE: Mapping to region H19/IGF2:IG-DMR is incomplete with hg38.
+* For reference genome T2T-CHM13v2.0: Download [NanoImprint_2_newbedfiles.Rmd](./NanoImprint_2_newbedfiles.Rmd) and [ctrls_2.xlsx](./ctrls_2.xlsx)
+* For reference genome hg38: Download [NanoImprint_Hg38_newbedfiles.Rmd](./NanoImprint_Hg38_newbedfiles.Rmd) and [ctrls_hg38.xlsx](./ctrls_hg38.xlsx). NOTE: Mapping to region H19/IGF2:IG-DMR is incomplete with hg38.
 * Place the files in your data folder and open the NanoImprint script. Import your data BED files into the `#import data` section and run the script to produce an NanoImprint report. See output examples below.
 
 Data requirements:
-* Data should be obtained from modbam2bed included in the [Human variation workflow](https://github.com/epi2me-labs/wf-human-variation) provided by ONTs epi2me labs. Both phased and unphasedBED files is required and should be created using the command line options `--phase_methyl` and `--methyl` in the [Human variation workflow](https://github.com/epi2me-labs/wf-human-variation).
+* Data should be obtained from modkit included in the [Human variation workflow](https://github.com/epi2me-labs/wf-human-variation) provided by ONTs epi2me labs. Both phased and unphased BEDMethyl files is required and should be created using the command line options `--mod` and `--phased` in the [Human variation workflow](https://github.com/epi2me-labs/wf-human-variation).
 * All three BED files must be sorted with BEDTools intersected before use. Sorting to the  regions can be done using the [region_T2T.bed](./regions_T2T.bed) or [regions_hg38.bed](./regions_hg38.bed):
 `bedtools intersect -a yourfile.methyl.cpg.acc.bed -b regions_T2T.bed > yourfile.methyl.filtered.bed`
 
